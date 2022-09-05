@@ -73,7 +73,7 @@ func main() {
 	valueOfexample4 := reflect.ValueOf(&example4{LegCount: 100}).Elem()
 	vLegCount := valueOfexample4.FieldByName("LegCount")
 	fmt.Println(vLegCount)
-	vLegCount.SetInt(1000)
+	vLegCount.SetInt(1000)	// set value
 	fmt.Println(vLegCount)
 	fmt.Println("--------------------------------------------------------")
 
