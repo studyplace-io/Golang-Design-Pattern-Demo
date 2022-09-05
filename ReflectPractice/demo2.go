@@ -5,19 +5,24 @@ import (
 	"reflect"
 )
 
+// 主要是
+// 接口对象 := reflect.ValueOf(类型)
+
 func main() {
 
-	// 范例一
+	// 范例一：从reflect.ValueOf(m1)中获取值。
 	var m1 int = 2022
 	valueOfm := reflect.ValueOf(m1)
 	fmt.Println(valueOfm)
 
+	// 可以用空接口+类型断言拿到值。
 	getm1 := valueOfm.Interface().(int)
+	// 可以强制类型转换。
 	getm2 := int(valueOfm.Int())
 	fmt.Printf("getm1: %v, getm2: %v", getm1, getm2)
 	fmt.Println("--------------------------------------------------------")
 
-	// 范例二
+	// 范例二：当反射体是struct时，访问字段的方法。
 	type example3 struct {
 		a int
 		b string
@@ -29,18 +34,19 @@ func main() {
 	instance := example3{
 		next: &example3{},
 	}
+	// 反射后取到valueOfinstance
 	valueOfinstance := reflect.ValueOf(instance)
-	fmt.Println("NumField: ", valueOfinstance.NumField())
+	fmt.Println("NumField: ", valueOfinstance.NumField())	// 数量
 
-	float32Field := valueOfinstance.Field(2)
-	fmt.Printf("float32Field: %v, float32FieldType: %v \n", float32Field, float32Field.Type())
-	boolField := valueOfinstance.Field(3)
-	fmt.Printf("boolField: %v, boolFieldType: %v \n", boolField, boolField.Type())
-	nextField := valueOfinstance.FieldByIndex([]int{4, 3}).Type()
+	float32Field := valueOfinstance.Field(2)	// 按照index取字段的value
+	fmt.Printf("float32Field: %v, float32FieldType: %v \n", float32Field, float32Field.Type()) // 查看
+	boolField := valueOfinstance.Field(3)	// 按照index取字段的value
+	fmt.Printf("boolField: %v, boolFieldType: %v \n", boolField, boolField.Type())	// 查看
+	nextField := valueOfinstance.FieldByIndex([]int{4, 3}).Type()	// 直接取嵌套类型的value
 	fmt.Println("FieldByIndex([]int{4, 3}).Type()", nextField)
 	fmt.Println("--------------------------------------------------------")
 
-	// 范例三
+	// 范例三：判断有效性
 	var a *int
 	fmt.Println("var a *int:", reflect.ValueOf(a).IsNil())
 	fmt.Println("nil:", reflect.ValueOf(nil).IsValid())
@@ -59,7 +65,7 @@ func main() {
 	fmt.Println("--------------------------------------------------------")
 
 
-	// 范例五
+	// 范例五：利用反射修改原值 需要有两个条件：1. 指针类型 2. 字段是大写
 	type example4 struct {
 		LegCount int
 	}
@@ -71,7 +77,7 @@ func main() {
 	fmt.Println(vLegCount)
 	fmt.Println("--------------------------------------------------------")
 
-	// 范例六
+	// 范例六：反射创建新类型
 	type example5 struct {
 		ID int
 		Name string
@@ -88,7 +94,7 @@ func main() {
 	}
 	fmt.Println("--------------------------------------------------------")
 
-	// 范例七
+	// 范例七：使用反射调用函数
 	funcValue := reflect.ValueOf(add)
 	paramList := []reflect.Value{reflect.ValueOf(10), reflect.ValueOf(30)}
 	resList := funcValue.Call(paramList)
