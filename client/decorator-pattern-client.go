@@ -1,7 +1,7 @@
 package main
 
 import (
-	"golanglearning/new_project/for-gong-zhong-hao/Design-Patterns-practice/DecoratorPattern"
+	"golanglearning/new_project/for_gong_zhong_hao/Design-Patterns-practice/DecoratorPattern"
 	"fmt"
 )
 

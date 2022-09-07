@@ -1,6 +1,6 @@
 package main
 
-import "golanglearning/new_project/for-gong-zhong-hao/Design-Patterns-practice/SubjectObjectPattern"
+import "golanglearning/new_project/for_gong_zhong_hao/Design-Patterns-practice/SubjectObjectPattern"
 
 /*
   观察者模式:提供了一种作用于任何实现了订阅者接口的对象的机制， 可对其事件进行订阅和取消订阅。

@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-import "golanglearning/new_project/for-gong-zhong-hao/Design-Patterns-practice/TemplatePattern"
+import "golanglearning/new_project/for_gong_zhong_hao/Design-Patterns-practice/TemplatePattern"
 
 /*
 	让我们来考虑一个一次性密码功能 （OTP） 的例子。
