@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 )
+
 // 介绍装饰器在Go中的实现
 // 装饰器在http中的使用
 // 装饰器实现Pipeline

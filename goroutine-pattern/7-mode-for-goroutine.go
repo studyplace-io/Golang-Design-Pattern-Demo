@@ -1,7 +1,6 @@
 package main
 
 import (
-
 	"errors"
 	"fmt"
 	"time"
@@ -10,7 +9,7 @@ import (
 // https://mp.weixin.qq.com/s/9Y6DsciTeZEn2RpTRysvow
 
 func main() {
-	//UseChanToStopGroutine()
+	//UseChanToStopGoroutine()
 	UseChanToBroadcast()
 
 }
@@ -56,7 +55,7 @@ func helloworld(stopChan chan struct{}) {
 	}
 }
 
-func UseChanToStopGroutine() {
+func UseChanToStopGoroutine() {
 	stopC := make(chan struct{})
 	go helloworld(stopC)
 

@@ -1,6 +1,6 @@
 package main
 
-import "golanglearning/new_project/for_gong_zhong_hao/Design-Patterns-practice/WrapperAdapterPattern"
+import "golanglearning/new_project/for-gong-zhong-hao/Design-Patterns-practice/WrapperAdapterPattern"
 
 func main() {
 

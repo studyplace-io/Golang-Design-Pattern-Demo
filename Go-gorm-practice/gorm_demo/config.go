@@ -19,7 +19,7 @@ var (
 
 func init() {
 	workdir, _ := os.Getwd()
-	wrpath := "/Go-gorm-practice/gorm_demo/"
+	wrpath := "/Design-Patterns-practice/Go-gorm-practice/gorm_demo/"
 	var str = []string{workdir, wrpath, "config.ini"}
 	path := strings.Join(str, "")
 
