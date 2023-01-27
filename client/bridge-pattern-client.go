@@ -1,8 +1,8 @@
 package main
 
 import (
-	"golanglearning/new_project/for-gong-zhong-hao/Design-Patterns-practice/BridgePattern"
 	"fmt"
+	"golanglearning/new_project/for-gong-zhong-hao/Design-Patterns-practice/Structural/BridgePattern"
 )
 
 func main() {

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"golanglearning/new_project/for-gong-zhong-hao/Design-Patterns-practice/ProxyPattern"
 	"fmt"
+	"golanglearning/new_project/for-gong-zhong-hao/Design-Patterns-practice/Structural/ProxyPattern"
 )
 
 

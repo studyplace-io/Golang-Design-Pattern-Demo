@@ -1,7 +1,7 @@
 package DecoratorPattern
 
 type TomatoTopping struct {
-	Pizza IPizza
+	Pizza              IPizza
 	TomatoToppingPrice int
 }
 
