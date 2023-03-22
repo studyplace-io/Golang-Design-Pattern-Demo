@@ -76,3 +76,6 @@ type IProduct interface {
 type ProductType int
 
 ```
+![](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/blob/feat_factory_method/image/simple_factory.jpg?raw=true)
+![](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/blob/feat_factory_method/image/factory_method.jpg?raw=true)
+
