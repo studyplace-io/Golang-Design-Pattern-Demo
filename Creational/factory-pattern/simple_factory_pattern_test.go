@@ -13,5 +13,8 @@ func TestFactoryPattern(t *testing.T) {
 	user := CreateUser(NormalUser)(111, "test")
 	fmt.Println(user)
 
+	userFunc := CreateUser(AdminUser)
+	fmt.Println(userFunc(100, "test-admin"))
+
 
 }
