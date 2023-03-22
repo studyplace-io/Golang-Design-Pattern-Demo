@@ -3,7 +3,7 @@
 
 ### 创建型模式：
 1. **简单工厂方法模式**：创建多个对象时使用
-2. **工厂方法模式**：：明确创建不同类型对象使用。多个工厂
+2. **工厂方法模式**：：明确创建不同类型对象使用。![代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/feat_factory_method/Creational/factory-pattern)
 3. **单例模式**
 4. **建造者模式**: 业务对象有多参数传递使用
 
