@@ -7,9 +7,16 @@ import (
 
 func TestFactoryMethodPattern(t *testing.T) {
 
+	var test IProductFactory
+	test = &StudyFactory{}
 
-	fmt.Println(new(TechFactory).CreateProduct(ProductTechBook).GetInfo())
+	book := test.CreateProduct(ProductStudyBook)
+	book.SetInfo()
+	fmt.Println(book.GetInfo())
 
-	fmt.Println(new(DailyFactory).CreateProduct(ProductDailyCar).GetInfo())
+	test = &MachineryFactory{}
+	car := test.CreateProduct(ProductMachineryCar)
+	car.SetInfo()
+	fmt.Println(car.GetInfo())
 
 }

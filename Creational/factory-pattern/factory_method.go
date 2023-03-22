@@ -5,19 +5,29 @@ package factory_pattern
  */
 
 type Book struct {
-	Id int
+	Id 		 int
 	BookName string
+	Info     string
 }
 
 func (b *Book) GetInfo() string {
-	return "book"
+	return b.Info
+}
+
+func (b *Book) SetInfo() {
+	b.Info = "这是一本书"
 }
 
 type Car struct {
 	Id int
 	CarName string
+	Info     string
 }
 
 func (c *Car) GetInfo() string {
-	return "car"
+	return c.Info
+}
+
+func (c *Car) SetInfo() {
+	c.Info = "这是一辆车"
 }

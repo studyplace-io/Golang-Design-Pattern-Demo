@@ -1,5 +1,12 @@
 package factory_pattern
 
+// 法一：可以实现此接口
+// UserFactory 用户工厂
+//type UserFactory interface {
+//
+//}
+
+// 法二：实现此方法，返回interface{}
 type UserCreateFunc func(id int, name string) interface{}
 
 type User struct {
