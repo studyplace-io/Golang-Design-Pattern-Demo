@@ -3,6 +3,9 @@ package builder_pattern
 type Book struct {
 	id       int
 	bookName string
+	author   string
+	content  string
+	theme    string
 	price    float64
 }
 
