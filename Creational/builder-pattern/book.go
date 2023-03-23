@@ -1,9 +1,9 @@
 package builder_pattern
 
 type Book struct {
-	Id 			int
-	BookName 	string
-	Price 		float64
+	id       int
+	bookName string
+	price    float64
 }
 
 func (b *Book) Builder(id int, name string) *BookBuilder {
