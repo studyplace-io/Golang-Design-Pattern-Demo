@@ -4,12 +4,13 @@
 ### 创建型模式：
 1. **简单工厂方法模式**:创建多个对象时使用。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Creational/factory-pattern)
 2. **工厂方法模式**:明确创建不同类型对象使用。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Creational/factory-pattern)
-3. **单例模式**:明确全局只需要初始化一个对象时使用[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Creational/Singleton_pattern)
+3. **单例模式**:明确全局只需要初始化一个对象时使用[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Creational/singleton-pattern)
 4. **建造者模式**:创建复杂对象使用。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Creational/builder-pattern)
 
 ### 结构型模式：
 1. **代理模式**：：可以和装饰器模式进一步解耦
 2. **装饰器模式**：基本常见。
+3. **中间件模式**：基本常见。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Structural/middleware_pattern)
 3. **适配器模式**
 4. **组合模式**
 5. **选项模式**：初始化参数传递
