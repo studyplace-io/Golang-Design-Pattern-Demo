@@ -9,6 +9,9 @@
     1. 在中间件模式中，可以自定义扩展需要的中间件插件。
     2. 调用时需要特别注意："注册"(需要在执行流程前，注册) "执行后处理"(需要记得调用Next()方法)
 
+![](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/blob/main/image/middleware.jpg?raw=true)
+![](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/blob/main/image/middleware-4.png?raw=true)
+
 ### 示例：
 ```go
 1. 模拟gin框架的中间件模式
@@ -71,6 +74,3 @@ func ApplyMiddleware(handler http.HandlerFunc, middlewares ...Middleware) http.H
 }
 
 ```
-![](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/blob/feat_factory_method/image/simple_factory.jpg?raw=true)
-![](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/blob/feat_factory_method/image/factory_method.jpg?raw=true)
-
