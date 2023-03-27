@@ -11,6 +11,8 @@ func TestOptionPattern(t *testing.T) {
 			fmt.Errorf("error: %s", err)
 		}
 	}
+
+	// 如此，调用方初始化时，就能自由配置对象
 	client := NewHttpClient(
 		WithTimeout(100),
 		WithMaxIdle(100),
