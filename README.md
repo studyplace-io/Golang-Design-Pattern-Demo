@@ -9,10 +9,10 @@
 
 ### 结构型模式：
 1. **代理模式**：：可以和装饰器模式进一步解耦。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Structural/proxy-pattern)
-2. **装饰器模式**：基本常见。
+2. **装饰器模式**：基本常见。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Structural/decorator-pattern)
 3. **中间件模式**：基本常见。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Structural/middleware-pattern)
 3. **适配器模式**
-4. **组合模式**
+4. **桥接模式**：[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Structural/bridge-pattern)
 5. **选项模式**：初始化参数传递。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Structural/option-pattern)
 
 ### 行为模式：
