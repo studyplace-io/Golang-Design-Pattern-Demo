@@ -8,6 +8,7 @@
     1. 使用工厂方法初始化对象。
     2. 在"抽象"中可以设置不同的"具体实现"。
 
+![](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/blob/main/image/bridge_pattern.jpg?raw=true)
 ### 示例：
 ```go
 1. 桥接模式+简易工厂方法使用
