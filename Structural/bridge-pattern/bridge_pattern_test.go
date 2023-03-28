@@ -1,19 +1,23 @@
-package main
+package bridge_pattern
 
 import (
 	"fmt"
-	"golanglearning/new_project/for-gong-zhong-hao/Design-Patterns-practice/Structural/BridgePattern"
+	"testing"
 )
 
-func main() {
+func TestBridgePattern(t *testing.T) {
 
-	// 打印机
-	hpPrinter := &BridgePattern.Hp{}
-	epsonPrinter := &BridgePattern.Epson{}
+	// 创建打印机
+	tt := NewPrinter(Hps)()
+	hpPrinter := tt.(*Hp)
+
+	ee := NewPrinter(Epsons)()
+	epsonPrinter := ee.(*Epson)
+
 
 	// mac电脑
-	macComputer := &BridgePattern.Mac{}
-
+	a := NewComputer(Macs)()
+	macComputer := a.(*Mac)
 	// mac电脑可以随时替换 两种不同的打印机
 
 	macComputer.SetPrinter(hpPrinter)
@@ -22,14 +26,17 @@ func main() {
 
 	macComputer.SetPrinter(epsonPrinter)
 	macComputer.Print()
+	macComputer.DoSomething()
 	fmt.Println()
 
 	// window电脑
-	winComputer := &BridgePattern.Windows{}
+	b := NewComputer(Wins)()
+	winComputer := b.(*Windows)
 
 	// window电脑也可以随时替换 不同的打印机
 	winComputer.SetPrinter(hpPrinter)
 	winComputer.Print()
+	winComputer.DoSomething()
 	fmt.Println()
 
 	winComputer.SetPrinter(epsonPrinter)
