@@ -7,7 +7,7 @@
 - 使用方法：
     1. 创建一个xxxAdapter对象，并使用嵌套struct。
     2. 实现新接口中需要的方法。
-
+![](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/blob/main/image/wrapper_adapter.jpg?raw=true)
 ### 示例：
 ```go
 /*
