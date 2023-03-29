@@ -8,15 +8,15 @@
 4. **建造者模式**:创建复杂对象使用。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Creational/builder-pattern)
 
 ### 结构型模式：
-1. **代理模式**：：可以和装饰器模式进一步解耦。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Structural/proxy-pattern)
+1. **代理模式**：可以和装饰器模式进一步解耦。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Structural/proxy-pattern)
 2. **装饰器模式**：基本常见。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Structural/decorator-pattern)
 3. **中间件模式**：基本常见。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Structural/middleware-pattern)
-3. **适配器模式**
+3. **适配器模式**：救火专用模式。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Structural/wrapper-adapter-pattern)
 4. **桥接模式**：拆分抽象与具体实现。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Structural/bridge-pattern)
 5. **选项模式**：初始化参数传递。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Structural/option-pattern)
 
 ### 行为模式：
-1. **责任链模式**
+1. **责任链模式**：一个对象或请求有流程化需求。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Behavioral/chain-of-responsibility-pattern)
 2. **命令模式**：适合提前把多个业务进行组合
 3. **迭代器模式**
 4. **观察者模式**
