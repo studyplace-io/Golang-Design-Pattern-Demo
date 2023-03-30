@@ -1,6 +1,6 @@
 package main
 
-import "golanglearning/new_project/for-gong-zhong-hao/Design-Patterns-practice/Behavioral/StrategyPatterns"
+import "golanglearning/new_project/for-gong-zhong-hao/Design-Patterns-practice/Behavioral/strategy-pattern"
 
 func main() {
 	Strategy1 := &StrategyPatterns.Strategy1{}
