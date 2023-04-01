@@ -17,7 +17,7 @@
 
 ### 行为模式：
 1. **责任链模式**：一个对象或请求有流程化需求。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Behavioral/chain-of-responsibility-pattern)
-2. **命令模式**：适合提前把多个业务进行组合
+2. **命令模式**：适合提前把多个业务进行组合。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Behavioral/command-pattern)
 3. **迭代器模式**
 4. **策略模式**：当做一件事情有不同方法时使用。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Behavioral/strategy-pattern)
 5. **模版模式**
