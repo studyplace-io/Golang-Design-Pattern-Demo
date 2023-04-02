@@ -7,7 +7,7 @@ const (
 
 type UserType int
 
-// 通过一个传参，分辨要创建何种类型
+// CreateUser 通过一个传参，分辨要创建何种类型
 func CreateUser(t UserType) UserCreateFunc {
 	switch t {
 	case NormalUser:
