@@ -1,4 +1,4 @@
-package IteratorPattern
+package iterator_pattern
 
 // Iterator 迭代器接口
 type Iterator interface {

@@ -1,4 +1,4 @@
-package IteratorPattern
+package iterator_pattern
 
 import (
 	"fmt"
