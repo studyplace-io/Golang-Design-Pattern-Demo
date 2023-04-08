@@ -20,5 +20,5 @@
 2. **命令模式**：适合提前把多个业务进行组合。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Behavioral/command-pattern)
 3. **迭代器模式** 遍历整合的自定义对象。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Behavioral/iterator-pattern)
 4. **策略模式**：当做一件事情有不同方法时使用。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Behavioral/strategy-pattern)
-5. **模版模式**
+5. **模版模式** 模版模式与策略模式非常容易混淆。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Behavioral/template-pattern)
 6. **观察者模式**：当一个对象状态被修改时，会通知"观察"它的对象。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Behavioral/subject-object-pattern)
