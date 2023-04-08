@@ -1,6 +1,6 @@
-package TemplatePattern
+package template_pattern
 
-// IOtp接口
+// IOtp 具体模版需要实现的接口
 type IOtp interface {
 	// 各种方法
 	// 生成随机的 n 位数字
@@ -13,13 +13,17 @@ type IOtp interface {
 	sendNotification(string) error
 }
 
-// 对象
+// Otp 抽象模版对象
 type Otp struct {
-	// 接口对象
+	// 内部有IOtp接口对象
 	IOtp IOtp
 }
 
-// 所有流程在这里做完 ，对外只有暴露这个方法。
+func NewOtp(IOtp IOtp) *Otp {
+	return &Otp{IOtp: IOtp}
+}
+
+// GenAndSendOTP 所有流程在这里做完 ，对外只有暴露这个方法。
 func (o *Otp) GenAndSendOTP(otpLength int) error {
 	// 流程
 	otp := o.IOtp.genRandomOTP(otpLength)
@@ -33,20 +37,3 @@ func (o *Otp) GenAndSendOTP(otpLength int) error {
 	}
 	return nil
 }
-
-
-
-// type otp struct {
-// }
-
-// func (o *otp) genAndSendOTP(iOtp iOtp, otpLength int) error {
-//  otp := iOtp.genRandomOTP(otpLength)
-//  iOtp.saveOTPCache(otp)
-//  message := iOtp.getMessage(otp)
-//  err := iOtp.sendNotification(message)
-//  if err != nil {
-//      return err
-//  }
-//  return nil
-// }
-

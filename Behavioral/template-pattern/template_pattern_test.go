@@ -12,5 +12,4 @@ func TestTemplatePattern(t *testing.T) {
 
 	cache2 := NewEtcdCache()
 	fmt.Println(cache2.Output(123))
-
 }
