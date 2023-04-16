@@ -22,3 +22,4 @@
 4. **策略模式**：当做一件事情有不同方法时使用。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Behavioral/strategy-pattern)
 5. **模版模式** 模版模式与策略模式非常容易混淆。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Behavioral/template-pattern)
 6. **观察者模式**：当一个对象状态被修改时，会通知"观察"它的对象。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/Behavioral/subject-object-pattern)
+7. **缓存代理模式**：当读取或是执行耗时长的请求或操作时，可以使用。 [代码示例]()
