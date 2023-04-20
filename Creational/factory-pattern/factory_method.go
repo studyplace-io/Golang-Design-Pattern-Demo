@@ -2,10 +2,10 @@ package factory_pattern
 
 /*
 	工厂方法：可以有多个工厂
- */
+*/
 
 type Book struct {
-	Id 		 int
+	Id       int
 	BookName string
 	Info     string
 }
@@ -19,9 +19,9 @@ func (b *Book) SetInfo() {
 }
 
 type Car struct {
-	Id int
+	Id      int
 	CarName string
-	Info     string
+	Info    string
 }
 
 func (c *Car) GetInfo() string {

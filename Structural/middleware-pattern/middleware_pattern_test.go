@@ -5,8 +5,6 @@ import (
 	"testing"
 )
 
-
-
 func TestMiddlewarePattern(t *testing.T) {
 
 	exampleContext := &Context{}
@@ -48,7 +46,6 @@ func middleware1() MainFunc {
 		middleware1PostHook()
 	}
 }
-
 
 func middleware2() MainFunc {
 	return func(c *Context) {

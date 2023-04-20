@@ -7,7 +7,6 @@ type Windows struct {
 	printer Printer
 }
 
-
 func NewWindows() ComputerCreateFunc {
 	return func() interface{} {
 		return &Windows{}
@@ -36,7 +35,6 @@ func (w *Windows) SetPrinter(p Printer) {
 type Mac struct {
 	printer Printer
 }
-
 
 func NewMac() ComputerCreateFunc {
 	return func() interface{} {

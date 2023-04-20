@@ -15,9 +15,8 @@ func TestTemplatePattern1(t *testing.T) {
 	// 建立第二个具体对象
 	emailOTP := NewEmail()
 
-
 	// 初始化抽象模版
-	o := NewOtp(emailOTP)  // 不同具体模版对象
+	o := NewOtp(emailOTP) // 不同具体模版对象
 	o.GenAndSendOTP(4)
 
 	fmt.Println("")

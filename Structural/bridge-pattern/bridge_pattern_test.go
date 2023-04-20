@@ -14,7 +14,6 @@ func TestBridgePattern(t *testing.T) {
 	ee := NewPrinter(Epsons)()
 	epsonPrinter := ee.(*Epson)
 
-
 	// mac电脑
 	a := NewComputer(Macs)()
 	macComputer := a.(*Mac)

@@ -8,7 +8,7 @@ type User struct {
 }
 
 type Author struct {
-	Name string
+	Name  string
 	Email string
 }
 
@@ -17,4 +17,3 @@ type Blog struct {
 	Author  Author `gorm:"embedded"`
 	Upvotes int32
 }
-

@@ -7,7 +7,7 @@ import (
 
 var _ RequestProvider = &RealRequestProvider{}
 
-type RealRequestProvider struct {}
+type RealRequestProvider struct{}
 
 func NewRealRequestProvider() *RealRequestProvider {
 	return &RealRequestProvider{}

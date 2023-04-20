@@ -18,13 +18,11 @@ func main() {
 	TryFanINFanOut()
 }
 
-
-
 /*
 	工作模式并不高效，会让整个流水线的效率取决于最慢的环节。
 	因为每个环节中的任务量是不同的，这意味着我们需要的机器资源是存在差异的。
 	任务量小的环节，尽量占有少量的机器资源，任务量重的环节，需要更多线程并行处理。
- */
+*/
 
 // generate 函数：它充当生产者角色，将数据写入 channel，并把该 channel 返回。当所有数据写入完毕，关闭 channel。
 func generate(nums ...int) <-chan int {
@@ -33,14 +31,13 @@ func generate(nums ...int) <-chan int {
 	// 启一个gorouitne 把data放入chan，当做生产者
 	go func() {
 		for _, num := range nums {
-			out <-num
+			out <- num
 		}
 		// 只有一个生产者时，执行完毕记得要关闭chan
 		close(out)
 	}()
 
 	return out
-
 
 }
 
@@ -60,7 +57,6 @@ func square(inputChan <-chan int) <-chan int {
 
 	}()
 
-
 	return out
 
 }
@@ -69,7 +65,7 @@ func square(inputChan <-chan int) <-chan int {
 func TryPipeline() {
 
 	// 串式调用
-	c := generate(2,3,4,5,6,3,6)
+	c := generate(2, 3, 4, 5, 6, 3, 6)
 	resultChan := square(c)
 
 	// 主goroutine当做消费者。
@@ -83,14 +79,13 @@ func TryPipeline() {
 
 ///////////////////////////////////////////////////
 
-
 // 负责调用FanINFanOut，使用两个generate1函数按照不同interval执行，
 // 实现了接收系统系统中断信号（终端上执行 CTRL+C 即可发送中断信号）的优雅的关闭机制。
 func TryFanINFanOut() {
 
 	// 分发出两个goroutine
-	mc1, stop1 := generate1("message from generator 1", time.Millisecond * 200)
-	mc2, stop2 := generate1("message from generator 2", time.Millisecond * 300)
+	mc1, stop1 := generate1("message from generator 1", time.Millisecond*200)
+	mc2, stop2 := generate1("message from generator 2", time.Millisecond*300)
 
 	// 整合多个chan的信息
 	mmc, wg1 := multiplex(mc1, mc2)
@@ -133,7 +128,6 @@ func TryFanINFanOut() {
 
 	fmt.Println("主goroutine退出")
 
-
 }
 
 func generate1(message string, interval time.Duration) (chan string, chan struct{}) {
@@ -152,12 +146,11 @@ func generate1(message string, interval time.Duration) (chan string, chan struct
 				return
 			default:
 				time.Sleep(interval)
-				messageChan <-message
+				messageChan <- message
 			}
 		}
 
 	}()
-
 
 	return messageChan, stopChan
 
@@ -173,7 +166,7 @@ func stopGenerating(messageChan chan string, stopChan chan struct{}) {
 // 多路复用函数 multiplex 创建并返回整合消息 channel 和控制并发的 wg
 func multiplex(messageChan ...chan string) (chan string, *sync.WaitGroup) {
 	mChan := make(chan string)
-	wg := &sync.WaitGroup{}	// 这里可以注意跟var wg sync.WaitGroup的区别！
+	wg := &sync.WaitGroup{} // 这里可以注意跟var wg sync.WaitGroup的区别！
 
 	for _, message := range messageChan {
 		wg.Add(1)
@@ -182,7 +175,7 @@ func multiplex(messageChan ...chan string) (chan string, *sync.WaitGroup) {
 			defer wg.Done()
 
 			for message := range m {
-				mChan <-message
+				mChan <- message
 
 			}
 
@@ -192,7 +185,3 @@ func multiplex(messageChan ...chan string) (chan string, *sync.WaitGroup) {
 	return mChan, wg
 
 }
-
-
-
-

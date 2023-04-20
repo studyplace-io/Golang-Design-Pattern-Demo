@@ -12,11 +12,11 @@ var DB *gorm.DB
 func DataBaseInit(connParam string) {
 
 	db, err := gorm.Open(mysql.New(mysql.Config{
-		DSN: connParam,
-		DefaultStringSize: 256,
-		DisableDatetimePrecision: true,
-		DontSupportRenameIndex: true,
-		DontSupportRenameColumn: true,
+		DSN:                       connParam,
+		DefaultStringSize:         256,
+		DisableDatetimePrecision:  true,
+		DontSupportRenameIndex:    true,
+		DontSupportRenameColumn:   true,
 		SkipInitializeWithVersion: false,
 	}), &gorm.Config{
 		NamingStrategy: schema.NamingStrategy{
@@ -30,7 +30,5 @@ func DataBaseInit(connParam string) {
 	sqlDB.SetConnMaxLifetime(30 * time.Second)
 
 	DB = db
-
-
 
 }

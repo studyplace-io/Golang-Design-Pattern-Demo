@@ -7,15 +7,15 @@ type RequestProvider interface {
 
 // CacheRequestProvider 缓存代理对象
 type CacheRequestProvider struct {
-	provider RequestProvider	// 接口对象
+	provider RequestProvider // 接口对象
 	// TODO: 这里可以实现一个LRU的缓存淘汰策略
-	cache    map[string]string 	// 缓存map
+	cache map[string]string // 缓存map
 }
 
 func NewCacheRequestProvider(provider RequestProvider) *CacheRequestProvider {
 	return &CacheRequestProvider{
 		provider: provider,
-		cache: make(map[string]string),
+		cache:    make(map[string]string),
 	}
 }
 
@@ -30,4 +30,3 @@ func (c *CacheRequestProvider) DoRequest(requestId string) string {
 
 	return request
 }
-

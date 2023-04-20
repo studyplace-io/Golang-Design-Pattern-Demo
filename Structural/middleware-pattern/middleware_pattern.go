@@ -8,8 +8,8 @@ type MainFunc func(c *Context)
 // Context 模仿gin的中间件模式
 type Context struct {
 	// 想成洋葱模型。
-	handlers []MainFunc  // 里面装的除了中间件方法，还有真正的业务逻辑方法
-	index int // 标示，记录下一个要执行的中间件
+	handlers []MainFunc // 里面装的除了中间件方法，还有真正的业务逻辑方法
+	index    int        // 标示，记录下一个要执行的中间件
 }
 
 // Use 把自己实现的中间件Func 加入到维护的切片中。
@@ -45,4 +45,3 @@ func (c *Context) DoSomething(somethingInput string, f MainFunc) {
 	// 这里需要执行具体逻辑
 	fmt.Println("do something important !!", somethingInput)
 }
-

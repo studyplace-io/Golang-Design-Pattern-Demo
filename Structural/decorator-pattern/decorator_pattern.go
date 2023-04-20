@@ -1,7 +1,7 @@
 package decorator_pattern
 
 type User struct {
-	Id 	 int
+	Id   int
 	Name string
 }
 
@@ -26,4 +26,3 @@ func GetInfoWithRole(fn UserInfoFunc) UserInfoFunc {
 		return user
 	}
 }
-

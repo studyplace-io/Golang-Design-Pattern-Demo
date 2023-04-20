@@ -7,7 +7,7 @@ const (
 
 /*
 	当有不同关连种类的对象需要创建，可以用工厂方法
- */
+*/
 
 // IProductFactory 总工厂
 type IProductFactory interface {
@@ -25,9 +25,7 @@ type IProduct interface {
 // ProductType 区分标示
 type ProductType int
 
-
-
-type StudyFactory struct {}
+type StudyFactory struct{}
 
 func (*StudyFactory) CreateProduct(t ProductType) IProduct {
 	switch t {
@@ -38,8 +36,7 @@ func (*StudyFactory) CreateProduct(t ProductType) IProduct {
 	return nil
 }
 
-
-type MachineryFactory struct {}
+type MachineryFactory struct{}
 
 func (*MachineryFactory) CreateProduct(t ProductType) IProduct {
 	switch t {
@@ -49,5 +46,3 @@ func (*MachineryFactory) CreateProduct(t ProductType) IProduct {
 
 	return nil
 }
-
-

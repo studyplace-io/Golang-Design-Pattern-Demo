@@ -10,33 +10,31 @@ package factory_pattern
 type UserCreateFunc func(id int, name string) interface{}
 
 type User struct {
-	Id int
+	Id       int
 	UserName string
 }
 
 func NewUser() UserCreateFunc {
 	return func(id int, name string) interface{} {
 		return &User{
-			Id: id,
+			Id:       id,
 			UserName: name,
 		}
 	}
 }
 
-
-
 type Admin struct {
-	Id int
+	Id        int
 	AdminName string
-	Role string
+	Role      string
 }
 
 func NewAdmin() UserCreateFunc {
 	return func(id int, name string) interface{} {
 		return &Admin{
-			Id: id,
+			Id:        id,
 			AdminName: name,
-			Role: "admin-role",
+			Role:      "admin-role",
 		}
 	}
 }

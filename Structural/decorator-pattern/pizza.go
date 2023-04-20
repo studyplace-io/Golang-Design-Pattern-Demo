@@ -1,6 +1,5 @@
 package decorator_pattern
 
-
 // IPizza 披萨对象接口
 type IPizza interface {
 	GetPrice() int

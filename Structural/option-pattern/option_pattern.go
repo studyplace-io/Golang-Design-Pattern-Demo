@@ -6,10 +6,10 @@ import (
 )
 
 type HttpClient struct {
-	Client  *http.Client
+	Client *http.Client
 	// 下列字段都是配置
-	Timeout int
-	MaxIdle int
+	Timeout     int
+	MaxIdle     int
 	ErrCallBack func(error)
 }
 
@@ -39,8 +39,8 @@ func (cos ClientOptions) apply(c *HttpClient) {
 // NewHttpClient 创建一个HttpClient对象，默认配置，但开放选项模式让用户自定义配置。
 func NewHttpClient(opts ...ClientOption) *HttpClient {
 	c := &HttpClient{
-		Timeout: defaultTimeout,
-		MaxIdle: defaultMaxIdle,
+		Timeout:     defaultTimeout,
+		MaxIdle:     defaultMaxIdle,
 		ErrCallBack: defaultErrCallBack,
 	}
 

@@ -16,4 +16,3 @@ func TestCommandPattern(t *testing.T) {
 	userInvoker.Execute("test", "1111")
 
 }
-

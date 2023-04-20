@@ -1,6 +1,5 @@
 package bridge_pattern
 
-
 // Printer "具体实现"接口
 // 需要实现PrintFile 方法
 type Printer interface {

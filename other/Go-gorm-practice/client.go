@@ -12,19 +12,17 @@ import (
 
 type User1 struct {
 	Name string
-	ID int
+	ID   int
 }
 
 func main() {
 
 	rand.Seed(time.Now().UnixNano())
-    id := rand.Int()%10000
+	id := rand.Int() % 10000
 	user1 := User1{
-		ID: id,
+		ID:   id,
 		Name: "jiang",
-
 	}
-
 
 	result := model.DB.Create(&user1)
 	fmt.Println(result.RowsAffected, result.Error)
@@ -32,11 +30,11 @@ func main() {
 	model.DB.First(&userfast)
 	fmt.Println(userfast.ID, userfast.Name)
 
-	id = rand.Int()%10000
+	id = rand.Int() % 10000
 	var Userlist = []User1{
 		{ID: id, Name: "aaaa"},
-		{ID: id+1, Name: "bbb"},
-		{ID: id+3, Name: "44444"},
+		{ID: id + 1, Name: "bbb"},
+		{ID: id + 3, Name: "44444"},
 	}
 	model.DB.Create(&Userlist)
 
@@ -53,7 +51,7 @@ func main() {
 	fmt.Println(result1.RowsAffected, result1.Error)
 
 	var userlist []User1
-	result = model.DB.Find(&userlist, []int{2,3,4})
+	result = model.DB.Find(&userlist, []int{2, 3, 4})
 	fmt.Println(result.RowsAffected, result.Error)
 	checkErrRecordNotFound(result.Error)
 	result = model.DB.Where("name = ?", "aaaa").Find(&userlist)
@@ -68,7 +66,7 @@ func main() {
 	model.DB.Find(&user3)
 	fmt.Println(user3.Name)
 
-	if err := model.DB.Where("name = ?", "jiang").Find(&userlist).Error; err!= nil {
+	if err := model.DB.Where("name = ?", "jiang").Find(&userlist).Error; err != nil {
 		log.Fatal(err)
 	}
 
@@ -76,7 +74,6 @@ func main() {
 		log.Fatal(result.Error)
 	}
 	fmt.Println(result.RowsAffected, result.Error)
-
 
 }
 

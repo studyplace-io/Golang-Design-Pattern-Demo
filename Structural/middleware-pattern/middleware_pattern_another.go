@@ -13,7 +13,7 @@ func LoggerMiddleware(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		// 这里可以做准备工作
 		log.Printf("%s %s", r.Method, r.URL.Path)
-		next(w, r)  // 这里会调用到下一个中间件
+		next(w, r) // 这里会调用到下一个中间件
 		// 执行后可以进行善后工作
 		log.Println("log middleware completed!")
 	}
@@ -31,6 +31,3 @@ func ApplyMiddleware(handler http.HandlerFunc, middlewares ...Middleware) http.H
 	}
 	return handler
 }
-
-
-

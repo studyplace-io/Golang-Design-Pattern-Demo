@@ -14,8 +14,6 @@ func main() {
 
 }
 
-
-
 // 1. 使用Map实现Set
 // 使用空结构体struct{}，意味着你的map的value部分并不占用空间。
 
@@ -25,7 +23,7 @@ type Set struct {
 
 func (s *Set) UseMapForSet(name string) error {
 
-	if _, ok := s.MapToSet[name]; ok{
+	if _, ok := s.MapToSet[name]; ok {
 		return nil
 	}
 	s.MapToSet[name] = struct{}{}
@@ -35,7 +33,6 @@ func (s *Set) UseMapForSet(name string) error {
 	return errors.New("aaaaa")
 
 }
-
 
 // 2. 使用chan struct{}实现Goroutine的同步
 
@@ -71,11 +68,10 @@ func UseChanToBroadcast() {
 	go helloworld(stopC)
 	go helloworld(stopC)
 
-	time.Sleep(time.Second*10)
+	time.Sleep(time.Second * 10)
 
 	close(stopC)
 	fmt.Println("主goroutine结束！")
 }
 
 // 后面几个模式没有太搞懂
-

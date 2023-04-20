@@ -1,6 +1,5 @@
 package decorator_pattern
 
-
 import "fmt"
 
 // 应该把功能抽象承接口

@@ -9,12 +9,12 @@ import (
 
 // 预先声明
 var (
-	Db 		 	string
-	DbHost   	string
-	DbPort   	string
-	DbUser   	string
-	DbPassWord 	string
-	DbName   	string
+	Db         string
+	DbHost     string
+	DbPort     string
+	DbUser     string
+	DbPassWord string
+	DbName     string
 )
 
 func init() {
@@ -30,8 +30,6 @@ func init() {
 	pathDB := strings.Join(dbConfig, "")
 	DataBaseInit(pathDB)
 
-
-
 }
 
 // 取配置文件
@@ -46,9 +44,8 @@ func LoadMysqlData(file *ini.File) {
 }
 
 // 错误处理
-func checkErr(err error)  {
+func checkErr(err error) {
 	if err != nil {
 		log.Fatal(err)
 	}
 }
-

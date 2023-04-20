@@ -7,8 +7,7 @@ import "fmt"
 	1. 命令的发送者与执行者解耦。
 	2. 可以进行命令对列的实现
 	3. 方便记录执行过程，结合装饰器能进行
- */
-
+*/
 
 // 业务代码
 
@@ -18,7 +17,6 @@ type UserService struct {
 func NewUserService() *UserService {
 	return &UserService{}
 }
-
 
 func (*UserService) Login(name, pass string) error {
 	if name == "test" && pass == "1111" {
@@ -30,8 +28,7 @@ func (*UserService) Login(name, pass string) error {
 	return fmt.Errorf("error username or pass")
 }
 
-
-type ScoreService struct {}
+type ScoreService struct{}
 
 func NewScoreService() *ScoreService {
 	return &ScoreService{}
@@ -41,7 +38,6 @@ func (s *ScoreService) Score(name string) error {
 	fmt.Printf("给%s赠送积分服务\n", name)
 	return nil
 }
-
 
 // 上下解耦
 

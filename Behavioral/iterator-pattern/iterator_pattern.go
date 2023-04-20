@@ -13,7 +13,6 @@ type Collection interface {
 	CreateIterator() Iterator
 }
 
-
 // User 对象
 type User struct {
 	Name string
@@ -26,7 +25,7 @@ func NewUser(name string, age int) *User {
 
 // UserIterator 对象迭代器
 type UserIterator struct {
-	index int  // 维护一个索引标示
+	index int // 维护一个索引标示
 	users []*User
 }
 
@@ -52,7 +51,6 @@ func (u *UserIterator) GetNext() *User {
 type UserCollection struct {
 	Users []*User
 }
-
 
 func (u *UserCollection) CreateIterator() Iterator {
 	return &UserIterator{

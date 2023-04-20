@@ -17,5 +17,4 @@ func TestBuilderPattern(t *testing.T) {
 	book2 := new(Book).Builder(id, "test-builder-pattern2").DefaultCreate()
 	fmt.Println(book2)
 
-
 }

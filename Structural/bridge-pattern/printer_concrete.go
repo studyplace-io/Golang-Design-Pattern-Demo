@@ -1,6 +1,5 @@
 package bridge_pattern
 
-
 import "fmt"
 
 // Epson 对象

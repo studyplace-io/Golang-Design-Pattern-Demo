@@ -52,4 +52,3 @@ func (c *Chariot) Driving() string {
 }
 
 var _ ICar = &Chariot{}
-

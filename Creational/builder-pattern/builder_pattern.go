@@ -43,9 +43,9 @@ func (b *BookBuilder) Build() *Book {
 	book := &Book{
 		id:       b.Id,
 		bookName: b.BookName,
-		author: b.Author,
-		content: b.Content,
-		theme: b.Theme,
+		author:   b.Author,
+		content:  b.Content,
+		theme:    b.Theme,
 	}
 
 	// 这里可以抽象出check()方法，做入参校验

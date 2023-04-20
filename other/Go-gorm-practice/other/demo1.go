@@ -8,9 +8,8 @@ import (
 
 type User struct {
 	Name string
-	ID int
+	ID   int
 }
-
 
 func main() {
 
@@ -34,12 +33,10 @@ func main() {
 	fmt.Println("成功", db)
 
 	user := User{
-		ID: 2,
+		ID:   2,
 		Name: "jiang",
-
 	}
 	result := db.Create(&user)
 	fmt.Println(result.RowsAffected, result.Error)
 
 }
-

@@ -13,7 +13,6 @@ func (u *UserService) Login(name string, pass string) {
 	fmt.Println("登入成功！！")
 }
 
-
 type UserProxy struct {
 	svc *UserService
 }
@@ -30,7 +29,6 @@ func (u *UserProxy) Login(decorator LogDecorator) LoginFunc {
 	// 使用装饰器模式调用f方法
 	return decorator(u.svc.Login)
 }
-
 
 // 结合装饰器模式。
 // LoginFunc 装饰器模式的重点：需要一个函数签名。

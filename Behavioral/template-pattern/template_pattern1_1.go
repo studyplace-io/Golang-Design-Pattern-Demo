@@ -8,14 +8,12 @@ type Email struct {
 	*Otp
 }
 
-
 func NewEmail() *Email {
 	// 初始化就把抽象模版中的具体模版注入
 	email := &Email{}
 	//email.Otp = &Otp{email}
 	return email
 }
-
 
 // 接口实现的方法
 
@@ -38,8 +36,6 @@ func (s *Email) sendNotification(message string) error {
 	fmt.Printf("EMAIL: sending email: %s\n", message)
 	return nil
 }
-
-
 
 // Sms 发送消息的对象
 // 具体模版对象

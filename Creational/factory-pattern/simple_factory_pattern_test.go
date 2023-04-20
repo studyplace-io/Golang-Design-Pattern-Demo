@@ -16,5 +16,4 @@ func TestFactoryPattern(t *testing.T) {
 	userFunc := CreateUser(AdminUser)
 	fmt.Println(userFunc(100, "test-admin"))
 
-
 }
