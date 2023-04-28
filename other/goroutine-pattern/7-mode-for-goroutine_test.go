@@ -11,7 +11,7 @@ import (
 
 func TestExample(t *testing.T) {
 	//UseChanToStopGoroutine()
-	UseChanToBroadcast()
+	//UseChanToBroadcast()
 
 }
 

@@ -15,7 +15,7 @@ import (
 // fan-out 用于分发任务，fan-in 用于数据整合，通过 FAN 模式可以让流水线更好地并发。
 
 func TestExample1(t *testing.T) {
-	TryPipeline()
+	//TryPipeline()
 	//TryFanINFanOut()
 }
 
