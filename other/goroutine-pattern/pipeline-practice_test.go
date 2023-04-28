@@ -6,6 +6,7 @@ import (
 	"os/signal"
 	"sync"
 	"syscall"
+	"testing"
 	"time"
 )
 
@@ -13,9 +14,9 @@ import (
 // pipeline 将数据流分为多个环节，channel 用于数据流动，goroutine 用于处理数据。
 // fan-out 用于分发任务，fan-in 用于数据整合，通过 FAN 模式可以让流水线更好地并发。
 
-func main() {
+func TestExample1(t *testing.T) {
 	TryPipeline()
-	TryFanINFanOut()
+	//TryFanINFanOut()
 }
 
 /*

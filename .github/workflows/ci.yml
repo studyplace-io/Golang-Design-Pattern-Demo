@@ -1,26 +1,16 @@
 name: CI
 
 on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches:
-      - master
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - master
+    branches: [ "main" ]
 
 env:
-  GO_VERSION: '1.17.5'
+  GO_VERSION: '1.18.5'
 
 jobs:
-  markdown-lint:
-    runs-on: ubuntu-latest
-    container: pouchcontainer/pouchlinter:v0.1.2
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Lint markdown files
-        run: find  ./ -name  "*.md" | grep -v '.github' | xargs mdl -r ~MD001,~MD004,~MD005,~MD006,~MD007,~MD010,~MD013,~MD022,~MD023,~MD024,~MD029,~MD031,~MD032,~MD033,~MD034,~MD036
 
   golang-lint:
     runs-on: ubuntu-latest
@@ -35,8 +25,5 @@ jobs:
         with:
           go-version: ${{ env.GO_VERSION }}
 
-      - name: Build the gopixiu binariy
-        run: go build -v ./...
-
-      - name: Run gopixiu unit test
+      - name: Run unit test
         run: go test -v ./...

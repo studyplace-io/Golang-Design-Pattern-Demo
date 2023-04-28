@@ -3,12 +3,13 @@ package main
 import (
 	"errors"
 	"fmt"
+	"testing"
 	"time"
 )
 
 // https://mp.weixin.qq.com/s/9Y6DsciTeZEn2RpTRysvow
 
-func main() {
+func TestExample(t *testing.T) {
 	//UseChanToStopGoroutine()
 	UseChanToBroadcast()
 

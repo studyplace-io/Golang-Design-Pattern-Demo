@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestProxyPattern(t *testing.T) {
+func TestProxyPattern1(t *testing.T) {
 
 	// 两个url请求
 	appStatusURL := "/app/status"
