@@ -32,7 +32,7 @@ func (c *Context) Run() {
 	firstFunc(c)
 }
 
-// 类似gin的GET方法 (PUT POST ... 等)
+// GET 类似gin的GET方法 (PUT POST ... 等)
 func (c *Context) GET(path string, f MainFunc) {
 	// 记得需要加入的中间件后面！！！
 	c.handlers = append(c.handlers, f)

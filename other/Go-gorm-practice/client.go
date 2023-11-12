@@ -3,7 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
-	model "golanglearning/new_project/for-gong-zhong-hao/Design-Patterns-practice/other/Go-gorm-practice/gorm_demo"
+	model "github.com/practice/Design-Patterns-practice/other/Go-gorm-practice/gorm_demo"
 	"gorm.io/gorm"
 	"log"
 	"math/rand"

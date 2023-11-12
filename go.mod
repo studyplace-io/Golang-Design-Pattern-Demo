@@ -1,4 +1,4 @@
-module golanglearning/new_project/for-gong-zhong-hao/Design-Patterns-practice
+module github.com/practice/Design-Patterns-practice
 
 go 1.18
 
