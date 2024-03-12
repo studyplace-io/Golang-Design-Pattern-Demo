@@ -7,6 +7,7 @@ import (
 
 func main() {
 
+	// 模拟后端存储
 	go server1()
 	go server2()
 	go server3()
@@ -17,9 +18,11 @@ func main() {
 		"http://localhost:8083",
 	}
 
+	// 随机模式
 	//rl := random.NewLoadBalancerForRandomMode()
 	//rl.SetBackendServer(backends)
 
+	// 轮询模式
 	rl := round.NewLoadBalancerForRoundRobinMode()
 	rl.SetBackendServer(backends)
 	rl.Run(":8080")
