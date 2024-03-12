@@ -27,3 +27,4 @@
 ### Other 模式：
 1. **创建资源对象模式**：模拟创建资源对象，并可扩展多个 hook 方法。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/other/create-resource-pattern)
 2. **goroutine 模式**：并发简易示例。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/other/goroutine-pattern)
+3. **反向代理模式**: 模拟http反向代理，实现轮询与随机模式。[代码示例](https://github.com/StudyPlace-io/Golang-Design-Pattern-Demo/tree/main/other/loadbalance-pattern)
